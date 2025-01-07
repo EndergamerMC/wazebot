@@ -15,22 +15,26 @@ export async function execute(interaction) {
          title = "Titel";
          beschreibung = "Beschreibung";
          placeholderTitle = "Gib einen Titel für dein Feedback ein";
-         placeholderBeschreibung = "Erzähl uns mehr! Alles wird anonym übermittelt!";
+         placeholderBeschreibung =
+            "Erzähl uns mehr! Alles wird anonym übermittelt! Keine Rückantwort möglich, daher sollte die Beschreibung möglichst detailliert und aussagekräftig sein.";
       } else if (interaction.locale === "fr") {
          title = "Titre";
          beschreibung = "Description";
          placeholderTitle = "Entrez un titre pour vos commentaires";
-         placeholderBeschreibung = "Dites-nous-en plus ! Tout est soumis de manière anonyme !";
+         placeholderBeschreibung =
+            "Dites-nous-en plus ! Tout est soumis de manière anonyme ! Aucune réponse n'est possible, la description doit donc être aussi détaillée et significative que possible.";
       } else if (interaction.locale === "it") {
          title = "Titulo";
          beschreibung = "Descrizione";
          placeholderTitle = "Inserisci un titolo per il tuo feedback";
-         placeholderBeschreibung = "Dicci di più! Tutto viene inviato in modo anonimo!";
+         placeholderBeschreibung =
+            "Dicci di più! Tutto viene inviato in modo anonimo! Non è possibile rispondere, pertanto la descrizione dovrà essere quanto più dettagliata e significativa possibile.";
       } else {
          title = "Title";
          beschreibung = "Description";
          placeholderTitle = "Enter a title for your feedback";
-         placeholderBeschreibung = "Tell us more! Everything is submitted anonymously!";
+         placeholderBeschreibung =
+            "Tell us more! Everything is submitted anonymously! No reply is possible, so the description should be as detailed and meaningful as possible.";
       }
 
       const modal = new ModalBuilder().setCustomId("feedbackModal").setTitle("Feedback (anonym)");
