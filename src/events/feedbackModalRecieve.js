@@ -1,11 +1,4 @@
-import {
-   ActionRowBuilder,
-   ButtonBuilder,
-   ButtonStyle,
-   EmbedBuilder,
-   Events,
-   InteractionType,
-} from "discord.js";
+import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, Events, InteractionType } from "discord.js";
 import { config } from "../config.js";
 
 export const name = Events.InteractionCreate;
@@ -15,11 +8,8 @@ export async function execute(interaction) {
       if (interaction.customId === "feedbackModal") {
          console.log("Feedback Modal Submit");
 
-         const antwortFeld1 =
-            interaction.fields.getTextInputValue("feedbackTitel");
-         const antwortFeld2 = interaction.fields.getTextInputValue(
-            "feedbackBeschreibung"
-         );
+         const antwortFeld1 = interaction.fields.getTextInputValue("feedbackTitel");
+         const antwortFeld2 = interaction.fields.getTextInputValue("feedbackBeschreibung");
 
          const serverId = interaction.guild.id;
 

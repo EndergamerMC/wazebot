@@ -1,10 +1,4 @@
-import {
-   ActionRowBuilder,
-   Events,
-   ModalBuilder,
-   TextInputBuilder,
-   TextInputStyle,
-} from "discord.js";
+import { ActionRowBuilder, Events, ModalBuilder, TextInputBuilder, TextInputStyle } from "discord.js";
 
 export const name = Events.InteractionCreate;
 
@@ -21,27 +15,25 @@ export async function execute(interaction) {
          title = "Titel";
          beschreibung = "Beschreibung";
          placeholderTitle = "Gib einen Titel für dein Feedback ein";
-         placeholderBeschreibung = "Erzähl uns mehr!";
+         placeholderBeschreibung = "Erzähl uns mehr! Alles wird anonym übermittelt!";
       } else if (interaction.locale === "fr") {
          title = "Titre";
          beschreibung = "Description";
          placeholderTitle = "Entrez un titre pour vos commentaires";
-         placeholderBeschreibung = "Dites-nous-en plus !";
+         placeholderBeschreibung = "Dites-nous-en plus ! Tout est soumis de manière anonyme !";
       } else if (interaction.locale === "it") {
          title = "Titulo";
          beschreibung = "Descrizione";
          placeholderTitle = "Inserisci un titolo per il tuo feedback";
-         placeholderBeschreibung = "Dicci di più!";
+         placeholderBeschreibung = "Dicci di più! Tutto viene inviato in modo anonimo!";
       } else {
          title = "Title";
          beschreibung = "Description";
          placeholderTitle = "Enter a title for your feedback";
-         placeholderBeschreibung = "Tell us more!";
+         placeholderBeschreibung = "Tell us more! Everything is submitted anonymously!";
       }
 
-      const modal = new ModalBuilder()
-         .setCustomId("feedbackModal")
-         .setTitle("Feedbackbogen");
+      const modal = new ModalBuilder().setCustomId("feedbackModal").setTitle("Feedback (anonym)");
 
       const feld1 = new TextInputBuilder()
          .setCustomId("feedbackTitel")
